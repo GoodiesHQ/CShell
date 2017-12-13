@@ -23,10 +23,10 @@ Writing shellcode to perform a specific task can be tedious when targetting mult
 
 ### Step 1: Write your payload
 
-#include "cshell.h"
+    #include "cshell.h"
 
-#define HTONS(A) ((((uint16_t)(A) & 0xff00) >> 8) | (((uint16_t)(A) & 0x00ff) << 8))
-#define OCTETS(a, b, c, d) (uint32_t)((d << 24) | (c << 16) | (b << 8) | (a))
+    #define HTONS(A) ((((uint16_t)(A) & 0xff00) >> 8) | (((uint16_t)(A) & 0x00ff) << 8))
+    #define OCTETS(a, b, c, d) (uint32_t)((d << 24) | (c << 16) | (b << 8) | (a))
 
     /* An example CShell payload */
 
