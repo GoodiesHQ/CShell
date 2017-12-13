@@ -10,7 +10,7 @@ x86:
 	$(CC) -m32 -fno-stack-protector ${CFLAGS} ${SRC} syscall_x86.s -o ${TARGET}-x86
 
 x64:
-	$(CC) -fno-stack-protector ${CFLAGS} ${SRC} syscall_x64_2.s -o ${TARGET}-x64
+	$(CC) -fno-stack-protector ${CFLAGS} ${SRC} syscall_x64.s -o ${TARGET}-x64
 
 clean:
 	rm -f ${TARGET}-x86 ${TARGET}-x64
