@@ -1,6 +1,7 @@
 TARGET=cshell
 CC=gcc
-CFLAGS=-nostdlib -fno-reorder-functions -fno-align-functions -fno-align-jumps -fno-align-loops -fno-align-labels -fno-prefetch-loop-arrays
+CFLAGS=-nostdlib -fno-reorder-functions -fno-align-functions -fno-align-jumps -fno-align-loops -fno-align-labels -fno-prefetch-loop-arrays -fPIC
+# CFLAGS=-fno-align-loops -fno-align-labels -fno-prefetch-loop-arrays -fPIC
 SRC=${TARGET}.c
 
 all:
