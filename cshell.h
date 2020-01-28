@@ -52,6 +52,8 @@ extern RET cshell6(unsigned long syscall_ord, ARG arg1, ARG arg2, ARG arg3, ARG 
 /* memory management */
 #ifdef SYS_mmap2
 #define cs_mmap2(addr, len, prot, flags, fd, off) cshell6(SYS_mmap2, (ARG)(addr), (ARG)(len), (ARG)(prot), (ARG)(flags), (ARG)(fd), (ARG)(off))
+#else
+#define cs_mmap2 cs_mmap
 #endif
 #define cs_mmap(addr, len, prot, flags, fd, off) cshell6(SYS_mmap, (ARG)(addr), (ARG)(len), (ARG)(prot), (ARG)(flags), (ARG)(fd), (ARG)(off))
 #define cs_mprotect(addr, len, prot) cshell3(SYS_mprotect, (ARG)(addr), (ARG)(len), (ARG)(prot))
