@@ -48,6 +48,7 @@ extern RET cshell6(unsigned long syscall_ord, ARG arg1, ARG arg2, ARG arg3, ARG 
 #define cs_wait4(pid, status, options, rusage) cshell4(SYS_wait4, (ARG)(pid), (ARG)(status), (ARG)(options), (ARG)(rusage))
 #define cs_exit(error_code) cshell1(SYS_exit, (ARG)(error_code))
 #define cs_execve(name, argv, envp) cshell3(SYS_execve, (ARG)(name), (ARG)(argv), (ARG)(envp))
+#define cs_nanosleep(req, rem) cshell2(SYS_nanosleep, (ARG)(req), (ARG)(rem))
 
 /* memory management */
 #ifdef SYS_mmap2
